@@ -54,8 +54,9 @@ This is a full setup script to install and configure a customized **Hyperland** 
 
 ## 🚀 How to Use
 
+### 📥 One-liner Install (Recommended)
+
+You can install everything with a single terminal command:
+
 ```bash
-git clone https://github.com/grassiricardo/hyperland-ubuntu-setup.git
-cd hyperland-ubuntu-setup
-chmod +x setup.sh
-./setup.sh
+wget -qO- https://raw.githubusercontent.com/grassiricardo/hyperland-ubuntu-setup/main/install.sh | bash
