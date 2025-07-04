@@ -1,5 +1,8 @@
 #!/bin/bash
+
 echo "🔧 Installing essential dependencies..."
+
+# Apt packages
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y \
   build-essential cmake meson ninja-build git curl wget unzip \
@@ -12,5 +15,16 @@ sudo apt install -y \
   libxcb-xinerama0-dev libxcb-xinput-dev \
   libxcb-xkb-dev libxkbcommon-x11-dev \
   wayland-protocols xwayland wl-clipboard \
-  swaybg mako waybar alacritty wofi \
-  xdg-desktop-portal-wlr zsh snapd gpg apt-transport-https software-properties-common
+  swaybg waybar alacritty wofi \
+  xdg-desktop-portal-wlr zsh snapd gpg apt-transport-https software-properties-common \
+  flatpak
+
+# Flatpak setup (for mako and Wayland notification support)
+echo "📦 Setting up Flatpak and installing Mako via Flathub..."
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Required runtime for notifications on Wayland
+sudo flatpak install -y flathub org.freedesktop.Notifications
+
+# Mako notification daemon
+sudo flatpak install -y flathub dev.geopjr.Mako
