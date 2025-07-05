@@ -19,6 +19,6 @@ sudo apt install -y \
   xdg-desktop-portal-wlr zsh snapd gpg apt-transport-https software-properties-common \
   flatpak dunst
 
-# Flatpak setup (optional/future packages)
+# Flatpak setup (optional for future use)
 echo "📦 Setting up Flatpak..."
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
