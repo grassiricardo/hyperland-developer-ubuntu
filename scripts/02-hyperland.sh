@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "🌌 Installing Hyperland..."
-git clone --recursive https://github.com/hyperlandwm/hyperland.git
+git clone --recursive https://github.com/hyprwm/Hyprland.git hyperland
 cd hyperland
 make all
 sudo make install
