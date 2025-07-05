@@ -15,7 +15,7 @@ sudo cmake --install build
 cd ..
 
 # Clona e instala aquamarine
-GIT_TERMINAL_PROMPT=0 git clone --depth=1 https://github.com/Aylur/Aquamarine.git aquamarine
+GIT_TERMINAL_PROMPT=0 git clone --depth=1 https://github.com/archcraft-os/aquamarine.git aquamarine
 cd aquamarine
 cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
