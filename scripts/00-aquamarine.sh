@@ -1,20 +1,26 @@
 #!/bin/bash
 
-echo "🌊 Building and installing Aquamarine manually..."
+echo "🌊 Compilando e instalando o Aquamarine..."
 
-# Clone latest aquamarine
+# Clonar o repositório oficial do Aquamarine
 git clone https://github.com/hyprwm/aquamarine.git
 cd aquamarine || exit 1
 
-# Use official build script provided in repo
-chmod +x build.sh
-./build.sh
+# Criar diretório de build
+mkdir -p build
+cd build || exit 1
 
-# Install (optional if build.sh already installs)
-sudo ninja -C build install
+# Configurar o projeto com CMake
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr ..
 
-# Cleanup
-cd ..
+# Compilar o projeto
+make -j"$(nproc)"
+
+# Instalar o Aquamarine
+sudo make install
+
+# Voltar ao diretório anterior e remover o repositório clonado
+cd ../..
 rm -rf aquamarine
 
-echo "✅ Aquamarine installed successfully!"
+echo "✅ Aquamarine instalado com sucesso!"
