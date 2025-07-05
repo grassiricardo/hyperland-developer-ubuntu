@@ -17,14 +17,8 @@ sudo apt install -y \
   wayland-protocols xwayland wl-clipboard \
   swaybg waybar alacritty wofi \
   xdg-desktop-portal-wlr zsh snapd gpg apt-transport-https software-properties-common \
-  flatpak
+  flatpak dunst
 
-# Flatpak setup (for mako and Wayland notification support)
-echo "📦 Setting up Flatpak and installing Mako via Flathub..."
+# Flatpak setup (optional/future packages)
+echo "📦 Setting up Flatpak..."
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# Required runtime for notifications on Wayland
-sudo flatpak install -y flathub org.freedesktop.Notifications
-
-# Mako notification daemon
-sudo flatpak install -y flathub dev.geopjr.Mako
