@@ -4,15 +4,15 @@ echo "🌊 Building and installing Aquamarine manually..."
 
 # Clone Aquamarine
 git clone https://github.com/hyprwm/aquamarine.git
-cd aquamarine || exit 1
+cd aquamarine/aquamarine || exit 1
 
-# Build and install from root
+# Build and install
 meson setup build
 ninja -C build
 sudo ninja -C build install
 
 # Cleanup
-cd ..
+cd ../../
 rm -rf aquamarine
 
 echo "✅ Aquamarine installed successfully!"
