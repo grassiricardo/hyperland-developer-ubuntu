@@ -19,6 +19,8 @@ sudo apt install -y \
   xdg-desktop-portal-wlr zsh snapd gpg apt-transport-https software-properties-common \
   flatpak dunst
 
-# Flatpak setup (optional for future use)
-echo "📦 Setting up Flatpak..."
+# Flatpak setup (optional for future packages like Spotify or VSCode)
+echo "📦 Setting up Flatpak support..."
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo "✅ Dependencies and base setup completed successfully!"
