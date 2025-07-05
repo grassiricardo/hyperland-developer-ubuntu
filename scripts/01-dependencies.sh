@@ -40,8 +40,8 @@ sudo apt install -y \
   extra-cmake-modules pkg-config
 
 # Optional dependencies required by Hyprland build system
-echo "📦 Installing udis86 and aquamarine (if available)..."
-sudo apt install -y libudis86-dev libaquamarine-dev || echo "⚠️ Some packages like 'libaquamarine-dev' may need manual build if not found."
+echo "📦 Installing optional udis86 library..."
+sudo apt install -y libudis86-dev
 
 # Flatpak setup (optional for future packages like Spotify or VSCode)
 echo "📦 Setting up Flatpak support..."
