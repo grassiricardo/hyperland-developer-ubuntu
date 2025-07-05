@@ -59,4 +59,4 @@ This is a full setup script to install and configure a customized **Hyperland** 
 You can install everything with a single terminal command:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/grassiricardo/hyperland-ubuntu-setup/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/grassiricardo/hyperland-developer-ubuntu/main/install.sh | bash
